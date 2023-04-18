@@ -3,23 +3,31 @@ package com.basiccoreprogram;
 import java.util.Scanner;
 
 public class BasicPrograms {
-    /**
-     * Method for checking the leap-year and printing.
+    /*
+     * Method for getting the power of table of two.
      * @param args
      */
 
     public static void main(String[] args) {
-        /*
-         *  Taking the user input and checking the condition
-         *    and printing the year is leap-year or not.
+        /**
+         * 1) Get user input for n in the range of 0 to 31
+         * 2) Taking and initialized variable i , power of 2
+         * 3) Putting the condition and printing
+         * 4) Multiplying with two and increasing the ith term
          */
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the year!");
-        int year = sc.nextInt();
-        if((year % 4 == 0) && (year % 100 != 0)){
-            System.out.println(year + " is a leap-year");
-        }else {
-            System.out.println(year + " is not a leap-year");
+        //  1) Get user input for n in the range of 0 to 31
+        System.out.println("Enter a Number In the range of: 0 <= Number < 31");
+        Scanner Sc = new Scanner(System.in);
+        // 2) Taking and initialized variable i , power of 2
+        int n = Sc.nextInt();
+        int i = 0;
+        int power_of_two = 1;
+        //  3) Putting the condition and printing
+        while (i <= n){
+            System.out.println(i + " " + power_of_two);
+            //  4) Multiplying with two and increasing the ith term
+            power_of_two = 2 * power_of_two;
+            i++;
         }
     }
 }
