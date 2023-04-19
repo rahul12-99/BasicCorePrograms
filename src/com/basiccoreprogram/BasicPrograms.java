@@ -4,41 +4,32 @@ import java.util.Scanner;
 
 public class BasicPrograms {
     /*
-     * Method to printing the prime factor of a number
+     * Method to printing the quotient and remainder
      * @param args
      */
 
     public static void main(String[] args) {
         /*
-         * 1) Taking user input and initialized the variable
-         * 2) Taking loop and iterate till n
-         * 3) Taking a loop and printing and storing the variable
-         * 4) Checking the reminder is greater than 2 and printing
+         * 1) Taking user input for Dividend and divisor
+         * 2) get the quotient and remainder
+         * 3) printing the quotient and remainder
          */
         /*
-         1) Taking user input and initialized the variable
+         1) Taking user input for Dividend and divisor
          */
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter a number:");
-        int number = sc.nextInt();
-
+        System.out.println("Enter Dividend and divisor:");
+        Scanner Sc = new Scanner(System.in);
+        int dividend = Sc.nextInt();
+        int divisor = Sc.nextInt();
         /*
-         2) Taking loop and iterate till n
+          2) get the quotient and remainder
          */
-        for (int i = 2; i < number; i++) {
-            /*
-             3) Taking a loop and printing and storing the variable
-             */
-            while (number % i == 0) {
-                System.out.println(i + " ");
-                number = number / i;
-            }
-        }
+        double quotient = dividend / divisor;
+        double remainder = dividend % divisor;
         /*
-          4) Checking the reminder is greater than 2 and printing
+         3) printing the quotient and remainder
          */
-        if (number > 2) {
-            System.out.println(number);
-        }
+        System.out.println("The Quotient is: " + quotient);
+        System.out.println("The Remainder is: " + remainder);
     }
 }
