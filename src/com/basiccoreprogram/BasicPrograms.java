@@ -4,32 +4,41 @@ import java.util.Scanner;
 
 public class BasicPrograms {
     /*
-     * Method to printing the nth harmonic value
+     * Method to printing the prime factor of a number
      * @param args
      */
 
     public static void main(String[] args) {
         /*
-         * 1) Get user input and initialized the variable
-         * 2) Taking a loop till n and adding in nthHarmonic variable
-         * 3) Printing the nthHarmonic value
+         * 1) Taking user input and initialized the variable
+         * 2) Taking loop and iterate till n
+         * 3) Taking a loop and printing and storing the variable
+         * 4) Checking the reminder is greater than 2 and printing
          */
         /*
-         1) Get user input and initialized the variable
+         1) Taking user input and initialized the variable
          */
-        double nthHarmonic = 0;
-        System.out.println("Enter a number");
-        Scanner Sc = new Scanner(System.in);
-        int N = Sc.nextInt();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a number:");
+        int number = sc.nextInt();
+
         /*
-         2) Taking a loop till n and adding in nthHarmonic variable
+         2) Taking loop and iterate till n
          */
-        for (int i = 1; i <= N; i++){
-            nthHarmonic += (float)1/i;
+        for (int i = 2; i < number; i++) {
+            /*
+             3) Taking a loop and printing and storing the variable
+             */
+            while (number % i == 0) {
+                System.out.println(i + " ");
+                number = number / i;
+            }
         }
         /*
-          3) Printing the nthHarmonic value
+          4) Checking the reminder is greater than 2 and printing
          */
-        System.out.println("Nth Harmonic Value is: " + nthHarmonic);
+        if (number > 2) {
+            System.out.println(number);
+        }
     }
 }
