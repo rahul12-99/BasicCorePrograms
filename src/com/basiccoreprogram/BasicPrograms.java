@@ -4,30 +4,32 @@ import java.util.Scanner;
 
 public class BasicPrograms {
     /*
-     * Method for getting the power of table of two.
+     * Method to printing the nth harmonic value
      * @param args
      */
 
     public static void main(String[] args) {
-        /**
-         * 1) Get user input for n in the range of 0 to 31
-         * 2) Taking and initialized variable i , power of 2
-         * 3) Putting the condition and printing
-         * 4) Multiplying with two and increasing the ith term
+        /*
+         * 1) Get user input and initialized the variable
+         * 2) Taking a loop till n and adding in nthHarmonic variable
+         * 3) Printing the nthHarmonic value
          */
-        //  1) Get user input for n in the range of 0 to 31
-        System.out.println("Enter a Number In the range of: 0 <= Number < 31");
+        /*
+         1) Get user input and initialized the variable
+         */
+        double nthHarmonic = 0;
+        System.out.println("Enter a number");
         Scanner Sc = new Scanner(System.in);
-        // 2) Taking and initialized variable i , power of 2
-        int n = Sc.nextInt();
-        int i = 0;
-        int power_of_two = 1;
-        //  3) Putting the condition and printing
-        while (i <= n){
-            System.out.println(i + " " + power_of_two);
-            //  4) Multiplying with two and increasing the ith term
-            power_of_two = 2 * power_of_two;
-            i++;
+        int N = Sc.nextInt();
+        /*
+         2) Taking a loop till n and adding in nthHarmonic variable
+         */
+        for (int i = 1; i <= N; i++){
+            nthHarmonic += (float)1/i;
         }
+        /*
+          3) Printing the nthHarmonic value
+         */
+        System.out.println("Nth Harmonic Value is: " + nthHarmonic);
     }
 }
