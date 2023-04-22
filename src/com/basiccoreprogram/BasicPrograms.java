@@ -4,32 +4,30 @@ import java.util.Scanner;
 
 public class BasicPrograms {
     /*
-     * Method to printing the quotient and remainder
+     * Method to swap two number
      * @param args
      */
-
     public static void main(String[] args) {
         /*
-         * 1) Taking user input for Dividend and divisor
-         * 2) get the quotient and remainder
-         * 3) printing the quotient and remainder
+         * 1) Taking user input and initialized the variable n1,n2 and also a temporary variable
+         * 2) write swapping logic and after swapping printing them
          */
         /*
-         1) Taking user input for Dividend and divisor
+         1) Taking user input and initialized the variable n1,n2 and also a temporary variable
          */
-        System.out.println("Enter Dividend and divisor:");
-        Scanner Sc = new Scanner(System.in);
-        int dividend = Sc.nextInt();
-        int divisor = Sc.nextInt();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter first number");
+        int n1 = sc.nextInt();
+        System.out.println("Enter second number");
+        int n2 = sc.nextInt();
+        int temp;
+        System.out.println("before swapping the number " + n1 +  " " + n2);
         /*
-          2) get the quotient and remainder
+         2) write swapping logic and after swapping printing them
          */
-        double quotient = dividend / divisor;
-        double remainder = dividend % divisor;
-        /*
-         3) printing the quotient and remainder
-         */
-        System.out.println("The Quotient is: " + quotient);
-        System.out.println("The Remainder is: " + remainder);
+        temp = n1;
+        n1 = n2;
+        n2 = temp;
+        System.out.println("after swapping the number " + n1 + " " + n2);
     }
 }
