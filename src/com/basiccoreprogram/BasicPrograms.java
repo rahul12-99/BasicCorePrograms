@@ -4,30 +4,28 @@ import java.util.Scanner;
 
 public class BasicPrograms {
     /*
-     * Method to swap two number
+     * Method to check even odd number
      * @param args
      */
     public static void main(String[] args) {
         /*
-         * 1) Taking user input and initialized the variable n1,n2 and also a temporary variable
-         * 2) write swapping logic and after swapping printing them
+         * 1) Taking user input for number
+         * 2) checking the condition for even or odd and printing
          */
         /*
-         1) Taking user input and initialized the variable n1,n2 and also a temporary variable
+         1) 1) Taking user input for number
          */
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter first number");
-        int n1 = sc.nextInt();
-        System.out.println("Enter second number");
-        int n2 = sc.nextInt();
-        int temp;
-        System.out.println("before swapping the number " + n1 +  " " + n2);
+        System.out.println("Enter the number");
+        int number = sc.nextInt();
         /*
-         2) write swapping logic and after swapping printing them
+         2) checking the condition for even or odd and printing
          */
-        temp = n1;
-        n1 = n2;
-        n2 = temp;
-        System.out.println("after swapping the number " + n1 + " " + n2);
+        if (number % 2 == 0) {
+            System.out.println(number + " is even ");
+        } else {
+            System.out.println(number + " is odd ");
+        }
+
     }
 }
