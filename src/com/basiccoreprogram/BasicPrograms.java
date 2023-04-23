@@ -4,25 +4,41 @@ import java.util.Scanner;
 
 public class BasicPrograms {
     /*
-     * Method to check even odd number
+     * Method to check largest number among three number
      * @param args
      */
     public static void main(String[] args) {
         /*
-         * 1) Taking user input for number
-         * 2) checking the condition for even or odd and printing
+         * 1) Taking user input for n1,n2,n3
+         * 2) check the condition n1 is greater and printing
+         * 3) check the condition n2 is greater and printing
+         * 4) condition for n3 is greater and printing
          */
         /*
-         1) 1) Taking user input for number
+         1) Taking user input for n1,n2,n3
          */
         Scanner sc = new Scanner(System.in);
-        System.out.println("Please enter an alphabet to check");
-        char c = sc.next().charAt(0);
-        if (c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U' || c == 'a' || c == 'e' || c == 'i' ||
-                c == 'o' || c == 'u') {
-            System.out.println(c + " is vowel ");
+        System.out.println("Enter first number");
+        int n1 = sc.nextInt();
+        System.out.println("Enter second number");
+        int n2 = sc.nextInt();
+        System.out.println("Enter third number");
+        int n3 = sc.nextInt();
+        /*
+         2) check the condition n1 is greater and printing
+         */
+        if(n1 > n2 && n1 > n3){
+            System.out.println(n1 + " is greater");
+            /*
+             3) check the condition n2 is greater and printing
+             */
+        } else if (n2 > n1 && n2 > n3) {
+            System.out.println(n2 + " is greater");
+            /*
+             4) condition for n3 is greater and printing
+             */
         } else {
-            System.out.println(c + " is consonant");
+            System.out.println(n3 + " is greater");
         }
     }
 }
